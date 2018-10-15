@@ -1,4 +1,7 @@
 #!/bin/bash
+# This is mostly copied from the wordpress docker-entrypoin.sh file
+# located at: https://github.com/docker-library/wordpress with a few
+# slight modifications for lighttpd support only.
 set -euo pipefail
 
 # usage: file_env VAR [DEFAULT]
@@ -23,7 +26,7 @@ file_env() {
 	unset "$fileVar"
 }
 
-user = "lighttpd"
+export user="lighttpd"
 
 if [[ "$user" == lighttpd ]]; then
 	uniqueEnvs=(

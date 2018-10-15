@@ -29,5 +29,5 @@ COPY ./mod_fastcgi.conf /etc/lighttpd/mod_fastcgi.conf
 
 COPY ./entrypoint.sh /entrypoint.sh
 
-#ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
